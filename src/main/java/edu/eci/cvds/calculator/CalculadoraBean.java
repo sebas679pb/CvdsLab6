@@ -57,7 +57,6 @@ public class CalculadoraBean {
 
     public void setValores(String texto) {
         ArrayList<Double>values = new ArrayList<>();
-        texto = texto.strip();
         String[]vals=texto.split(";");
         for(String value: vals){
             values.add(Double.valueOf(value));
