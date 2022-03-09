@@ -138,7 +138,7 @@ public class CalculadoraBean {
     }
 
     public void calculateXXX(){
-        setValores((text=="")?"0":text);
+        setValores((text.equals(""))?"0":text);
         historial.add(text);
         mode = calculateMode(values);
         mean = calculateMean(values);
