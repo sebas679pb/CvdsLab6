@@ -7,3 +7,4 @@ deployment:
     branch: master
     heroku: 
       appname: lab6cvds
+      
