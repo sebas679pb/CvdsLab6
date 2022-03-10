@@ -4,16 +4,28 @@
     xmlns:p="http://primefaces.org/ui">
     <style>
         body{
-        background-color: rgb(17, 9, 75);
+        /* background-color: rgb(17, 9, 75); */
         color:darkred;
         }
         .moda{
             visibility:hidden;
         }
+        .calculator{
+            text-align: center;
+            align-items: center;
+            align-content: center;
+        }
+        .table{
+            align-self:center;
+            text-align:center;
+            align-items:center;
+            align-content:center;
+            
+        }
     </style>
     
 <h:body>
- <h:form id="calculadora_form">
+ <h:form id="calculadora_form" class="calculator">
     <p:outputLabel class="moda" value="#{calculadoraBean.getMode()}"/>
     <br></br>
     <p:inputText name="texto" value="#{calculadoraBean.text}"/>
@@ -31,7 +43,7 @@
     <br></br>
     <p:commandButton value="reset" update="calculadora_form" actionListener="#{calculadoraBean.restart()}"></p:commandButton>
     <br></br>
-    <h:dataTable value="#{calculadoraBean.historial}"
+    <h:dataTable class="table" value="#{calculadoraBean.historial}"
                     var="datos"  style="width: 600px;"
                     rendered="#{calculadoraBean.historial.size()>0}">
                 <h:column>
